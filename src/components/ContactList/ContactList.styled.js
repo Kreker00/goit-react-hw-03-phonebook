@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledContactList = styled.ul`
+export const List = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: auto;
@@ -10,7 +10,7 @@ export const StyledContactList = styled.ul`
   justify-content: center;
 `;
 
-export const StyledContactItem = styled.li`
+export const ListItem = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,18 +20,5 @@ export const StyledContactItem = styled.li`
 
   &:hover {
     background-color: #f0f0f0;
-  }
-`;
-
-export const StyledDeleteButton = styled.button`
-  background-color: #ff6347;
-  color: #fff;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-
-  &:hover {
-    background-color: #d63431;
   }
 `;

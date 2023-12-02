@@ -1,21 +1,17 @@
 import { ContactListItem } from '../ContactListItem/ContactListItem';
-import {
-  StyledContactList,
-  StyledContactItem,
-  StyledDeleteButton,
-} from './ContactList.styled';
+import { List, ListItem } from './ContactList.styled';
 
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
-    <StyledContactList>
+    <List>
       {contacts.map(contact => (
-        <StyledContactItem key={contact.id}>
-          <ContactListItem contact={contact} />
-          <StyledDeleteButton onClick={() => onDeleteContact(contact.id)}>
-            Delete
-          </StyledDeleteButton>
-        </StyledContactItem>
+        <ListItem key={contact.id}>
+          <ContactListItem
+            contact={contact}
+            onDeleteContact={onDeleteContact}
+          />
+        </ListItem>
       ))}
-    </StyledContactList>
+    </List>
   );
 };
